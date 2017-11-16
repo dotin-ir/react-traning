@@ -1,0 +1,56 @@
+import React from 'react';
+import {render} from 'react-dom';
+
+class App extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {name: "React"};
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({name: e.target.value});
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount')
+    }
+
+    componentDidMount() {
+        console.log('componentDidMount')
+    }
+
+    componentWillReceiveProps() {
+        console.log('componentWillReceiveProps')
+    }
+
+    shouldComponentUpdate() {
+        console.log('shouldComponentUpdate')
+        return true;
+    }
+
+    componentWillUpdate() {
+        console.log('componentWillUpdate')
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate')
+    }
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount')
+    }
+
+    render () {
+        console.log('render')
+        return (
+            <div>
+            <p> Hello {this.state.name}!</p>
+            <input type="text" onChange={this.handleChange}/>
+            </div>
+        );
+    }
+}
+
+render(<App name="asghar"/>, document.getElementById('app'));
