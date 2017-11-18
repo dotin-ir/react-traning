@@ -2,9 +2,9 @@
 export const states = {
     1: 'Fars',
     2: 'Tehran',
-    3: 'Esfahan',
-    4: 'Yaz',
-    5: 'Azarbayejan Sharghi',
+    3: 'Isfahan',
+    4: 'Yazd',
+    5: 'Azerbaijan Sharghi',
 };
 
 export const cities = {
@@ -17,7 +17,7 @@ export const cities = {
         2: 'Damavand'
     },
     3: {
-        1: 'Esfahan',
+        1: 'Isfahan',
         2: 'Najafabad'
     },
     4: {
